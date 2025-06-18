@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낙화 - 전체 맵</title>
+    <link rel="stylesheet" href="../css/map.css">
+</head>
+
+<body>
+    <header class="fixed-header">
+        <h1><a href="../index.html">낙화</a> 전체 맵</h1>
+    </header>
+
+    <div class="map-container">
+        <section class="map-section map1">
+            <div class="map-box">
+                <div class="map-image">MAP 1</div>
+                <div class="map-desc">
+                    <h2>폐허의 성채</h2>
+                    <p>잿더미 속에서 다시 일어서는 성채. 적의 첫 거점입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section map2">
+            <div class="map-box">
+                <div class="map-image">MAP 2</div>
+                <div class="map-desc">
+                    <h2>붉은 달 숲</h2>
+                    <p>붉은 달빛이 비추는 숲. 망령과의 첫 조우가 이뤄집니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section map3">
+            <div class="map-box">
+                <div class="map-image">MAP 3</div>
+                <div class="map-desc">
+                    <h2>잊힌 무덤</h2>
+                    <p>옛 영웅들이 잠든 무덤. 검은 안개가 드리운 곳입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section map4">
+            <div class="map-box">
+                <div class="map-image">MAP 4</div>
+                <div class="map-desc">
+                    <h2>검무의 절정</h2>
+                    <p>최후의 전장. 빛과 어둠이 마지막으로 충돌합니다.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.map-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.6 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>

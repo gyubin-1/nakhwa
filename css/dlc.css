@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Arita-buri-SemiBold";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e0e0e4;
+}
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    font-family: "Arita-buri-SemiBold";
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif KR', serif;
+    background: #181818;
+    color: #f4ede6;
+}
+
+.shop-header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.shop-header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.shop-header p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.back-button-wrapper {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #740202;
+  color: #fff3f0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.back-button:hover {
+  background: #b41010;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.dlc-shop {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    max-width: 1320px;
+    margin: auto;
+}
+
+.dlc-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dlc-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+.dlc-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.dlc-card h2 {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.dlc-card p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.dlc-card button {
+    margin-top: 16px;
+    padding: 10px 24px;
+    background: #700808;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dlc-card button:hover {
+    background: #b41010;
+}

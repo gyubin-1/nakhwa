@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Arita-buri-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e4;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a0e0e, #3a1c1c);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+.signup-container h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #f5e8d4;
+}
+
+.signup-container h1:hover a{
+  color: #740202;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #f5e8d4;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 16px;
+  background: #2e1a1a;
+  color: #fff;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border: 1px solid #a94444;
+  background: #3a2222;
+}
+
+button {
+  margin-top: 25px;
+  padding: 12px;
+  font-size: 18px;
+  background: #a94444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #c84b4b;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.login-link a {
+  color: #ff9999;
+  text-decoration: none;
+}

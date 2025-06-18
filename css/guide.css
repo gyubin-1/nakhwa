@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Arita-buri-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e4;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #202020;
+  color: #e0e0e4;
+  font-family: "Arita-buri-SemiBold";
+}
+
+.board-header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.board-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.board-header h1:hover a{
+    color: #740202;
+}
+
+.board-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.board-nav a {
+  color: #e0e0e4;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.board-nav a:hover {
+  background: #740202;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-box button {
+  padding: 8px 16px;
+  background: #740202;
+  color: #e0e0e4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #b41010;
+}
+
+.post-list {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 20px 40px;
+}
+
+.post-item {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.post-item h2 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.meta {
+  font-size: 12px;
+  color: #bbb;
+}

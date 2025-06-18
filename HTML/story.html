@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낙화 스토리</title>
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+
+<body>
+    <header class="fixed-header">
+        <h1><a href="../index.html">낙화 </a>스토리</h1>
+    </header>
+
+    <div class="story-container">
+        <section class="story-slide color1">
+            <div class="text-box">
+                <p>폐허 속, 첫 검을 쥔 그날. 복수의 서막이 올랐다.</p>
+            </div>
+            <div class="scroll-indicator">▼ SCROLL ▼</div>
+        </section>
+        <section class="story-slide color2">
+            <div class="text-box">
+                <p>붉은 달이 뜬 밤, 잊힌 진실이 모습을 드러낸다.</p>
+            </div>
+            <div class="scroll-indicator">▼ SCROLL ▼</div>
+        </section>
+        <section class="story-slide color3">
+            <div class="text-box">
+                <p>망령의 무덤, 과거의 그림자와 마주하라.</p>
+            </div>
+            <div class="scroll-indicator">▼ SCROLL ▼</div>
+        </section>
+        <section class="story-slide color4">
+            <div class="text-box">
+                <p>최후의 결투, 어둠을 베어내는 검무가 완성된다.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.story-slide');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.6 });
+
+        slides.forEach(slide => observer.observe(slide));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Arita-buri-SemiBold";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e0e0e4;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Arita-buri-SemiBold";
+  background: #202020;
+  color: #e0e0e4;
+}
+
+.behind-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.behind-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.behind-header p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #740202;
+  color: #fff3f0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.back-button:hover {
+  background: #b41010;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.behind-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1320px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.behind-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.behind-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(255, 0, 0, 0.2);
+}
+
+.img-box {
+  background: #333;
+  color: #ccc;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.behind-card:hover .img-box {
+  background: #500000;
+  color: #fff;
+}
+
+.behind-card h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  animation: scaleUp 0.4s ease forwards;
+}
+
+.lightbox-content video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  text-decoration: none;
+  background: #700808;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

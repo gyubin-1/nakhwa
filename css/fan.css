@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Arita-buri-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #e0e0e4;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #202020;
+  color: #e0e0e4;
+  font-family: 'Arita-buri-SemiBold', sans-serif;
+}
+
+.fanart-header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.fanart-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.fanart-header p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  background: #740202;
+  color: #e0e0e4;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.back-button:hover {
+  background: #b41010;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.fanart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1320px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.fanart-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fanart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+.img-box {
+  background: #333;
+  color: #999;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.fanart-card h2 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.fanart-card p {
+  font-size: 14px;
+  color: #ccc;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낙화 - 캐릭터 커스터마이징</title>
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <header class="custom-header">
+        <h1><a href="../index.html">낙화</a> - 캐릭터 커스터마이징</h1>
+        <p>당신만의 주인공을 디자인하세요</p>
+    </header>
+
+    <section class="custom-grid">
+        <div class="custom-card">
+            <div class="img-box">커스터마이징 1</div>
+            <div class="like-container">
+                <button class="like-button">❤️ 좋아요</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <div class="custom-card">
+            <div class="img-box">커스터마이징 2</div>
+            <div class="like-container">
+                <button class="like-button">❤️ 좋아요</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <div class="custom-card">
+            <div class="img-box">커스터마이징 3</div>
+            <div class="like-container">
+                <button class="like-button">❤️ 좋아요</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+        <div class="custom-card">
+            <div class="img-box">커스터마이징 4</div>
+            <div class="like-container">
+                <button class="like-button">❤️ 좋아요</button>
+                <span class="like-count">0</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pagination">
+        <a href="#">다음 페이지 →</a>
+    </footer>
+
+    <script>
+        const likeButtons = document.querySelectorAll('.like-button');
+
+        likeButtons.forEach((button, index) => {
+            const countEl = button.nextElementSibling;
+            const saved = localStorage.getItem(`likeCount${index}`) || 0;
+            countEl.textContent = saved;
+
+            button.addEventListener('click', () => {
+                let count = parseInt(countEl.textContent);
+                count++;
+                countEl.textContent = count;
+                localStorage.setItem(`likeCount${index}`, count);
+            });
+        });
+    </script>
+</body>
+
+</html>
